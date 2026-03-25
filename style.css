@@ -1,0 +1,68 @@
+#movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.movie-content {
+  display: flex;
+  gap: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* IZQUIERDA */
+.left {
+  width: 200px;
+  text-align: center;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.left h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.left p {
+  color: #222;
+}
+
+/* DERECHA */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+}
+
+.right input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 8px;
+}
+
+.right label {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
