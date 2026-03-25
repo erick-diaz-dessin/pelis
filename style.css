@@ -10,7 +10,7 @@
   padding: 15px;
   margin: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 95%;
+  width: 90%;
 }
 
 .movie-content {
@@ -24,7 +24,7 @@ h1 {
 
 /* IZQUIERDA */
 .left {
-  width: 200px;
+  width: 25%;
   text-align: center;
 }
 
@@ -64,7 +64,6 @@ h1 {
 
 iframe {
   width: 100%;
-  height: 300px;
   border-radius: 8px;
 }
 
