@@ -6,10 +6,16 @@ const movies = [
     trailer: "https://www.youtube.com/embed/ez6WQ7IX72U"
   },
   {
-    title: "Interstellar",
-    year: 2014,
-    poster: "https://m.media-amazon.com/images/I/71n58yH3nCL._AC_SY679_.jpg",
-    trailer: "https://www.youtube.com/embed/zSWdZVtXT7E"
+    title: "Good will hunting",
+    year: 1997,
+    poster: "./images/Good_Will_Hunting.png",
+    trailer: "https://www.youtube.com/embed/PaZVjZEFkRs"
+  },
+   {
+    title: "Scent of a woman",
+    year: 1992,
+    poster: "./images/unnamed.jpg",
+    trailer: "https://www.youtube.com/embed/losLAzU9YCk"
   }
 ];
 
