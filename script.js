@@ -125,6 +125,96 @@ const movies = [
     year: 1999,
     poster: "./images/The_Sixth_Sense_poster.png",
     trailer: "https://www.youtube.com/embed/3-ZP95NF_Wk"
+  },
+  {
+    title: "Ghost",
+    year: 1990,
+    poster: "./images/Ghost_(1990_movie_poster).jpg",
+    trailer: "https://www.youtube.com/embed/capS3yV9eY8"
+  },
+  {
+    title: "The Fly",
+    year: 1986,
+    poster: "./images/Fly_poster.jpg",
+    trailer: "https://www.youtube.com/embed/fj1SHpBsY7w"
+  },
+  {
+    title: "Joker",
+    year: 2019,
+    poster: "./images/Joker_(2019_film)_poster.jpg",
+    trailer: "https://www.youtube.com/embed/zAGVQLHvwOY"
+  },
+  {
+    title: "Gran Torino",
+    year: 2008,
+    poster: "./images/Gran_Torino_poster.jpg",
+    trailer: "https://www.youtube.com/embed/RMhbr2XQblk"
+  },
+  {
+    title: "Bad Santa",
+    year: 2003,
+    poster: "./images/Bad_Santa_film.jpg",
+    trailer: "https://www.youtube.com/embed/xQvaoRScND4"
+  },
+  {
+    title: "The Sandlot",
+    year: 1993,
+    poster: "./images/Sandlot_poster.jpg",
+    trailer: "https://www.youtube.com/embed/iXOOL6SygW8"
+  },
+  {
+    title: "Dodgeball: A True Underdog Story",
+    year: 2004,
+    poster: "./images/Movie_poster_Dodgeball_A_True_Underdog_Story.jpg",
+    trailer: "https://www.youtube.com/embed/W-XbDZUnUmw"
+  },
+  {
+    title: "A League of Their Own",
+    year: 1992,
+    poster: "./images/League_of_their_own_ver2.jpg",
+    trailer: "https://www.youtube.com/embed/kZihpHXsGLE"
+  },
+  {
+    title: "The Family Man",
+    year: 2000,
+    poster: "./images/Family_man_movie.jpg",
+    trailer: "https://www.youtube.com/embed/OnouJoQs52c"
+  },
+  {
+    title: "The Benchwarmers",
+    year: 2006,
+    poster: "./images/Benchwarmers_poster.jpg",
+    trailer: "https://www.youtube.com/embed/DgLZGPfxpkM"
+  },
+  {
+    title: "Nosotros los nobles",
+    year: 2013,
+    poster: "./images/Nosotros_los_Nobles_poster.jpg",
+    trailer: "https://www.youtube.com/embed/fDF_ZdL7G9o"
+  },
+  {
+    title: "Click",
+    year: 2006,
+    poster: "./images/Click_film.jpg",
+    trailer: "https://www.youtube.com/embed/zZNC5emNyEQ"
+  },
+  {
+    title: "Hellboy",
+    year: 2006,
+    poster: "./images/Hellboy_poster.jpg",
+    trailer: "https://www.youtube.com/embed/kA9vtXbbhVs"
+  },
+  {
+    title: "El laberinto del fauno",
+    year: 2006,
+    poster: "./images/Pan's_Labyrinth.jpg",
+    trailer: "https://www.youtube.com/embed/FGzvvUBXj5M"
+  },
+  {
+    title: "The Matrix",
+    year: 1999,
+    poster: "./images/The_Matrix.png",
+    trailer: "https://www.youtube.com/embed/vKQi3bBA1y8"
   }
 ];
 
