@@ -3,7 +3,7 @@ const movies = [
     title: "Volver al futuro",
     year: 1985,
     poster: "./images/Back_to_the_Future.jpg",
-    trailer: "https://drive.google.com/file/d/1lAyHG193SGYyGCJqMF-XfWvW-I5YMR-C/preview"
+    trailer: "https://www.youtube.com/embed/ez6WQ7IX72U"
   },
   {
     title: "Interstellar",
@@ -20,27 +20,33 @@ movies.forEach(movie => {
   div.className = "movie";
 
   div.innerHTML = `
+    <!-- HEADER -->
+    <div class="movie-header">
+        <div class="title">
+        ${movie.title} (${movie.year})
+        </div>
+
+        <label class="watched">
+        <input type="checkbox" class="watched-checkbox">
+        Ya la vi
+        </label>
+    </div>
+
     <div class="movie-content">
 
-      <!-- IZQUIERDA -->
-      <div class="left">
+        <!-- IZQUIERDA -->
+        <div class="left">
         <img src="${movie.poster}" class="poster">
-        <h2>${movie.title}</h2>
-        <p>${movie.year}</p>
-      </div>
+        </div>
 
-      <!-- DERECHA -->
-      <div class="right">
+        <!-- DERECHA -->
+        <div class="right">
         <iframe 
-  src="${movie.trailer}" 
-  allow="autoplay; fullscreen"
-  allowfullscreen>
-</iframe>
-        <label>
-          <input type="checkbox" class="watched-checkbox">
-          Ya la vi
-        </label>
-      </div>
+            src="${movie.trailer}" 
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+        </div>
 
     </div>
   `;

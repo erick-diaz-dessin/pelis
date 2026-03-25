@@ -67,3 +67,29 @@ iframe {
   height: 300px;
   border-radius: 8px;
 }
+
+/* HEADER NUEVO */
+.movie-header {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* título */
+.movie-header .title {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* checkbox a la derecha */
+.movie-header .watched {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+}
+
+.movie-header input[type="checkbox"] {
+  transform: scale(1.3);
+}
