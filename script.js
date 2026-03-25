@@ -1,3 +1,23 @@
+import { db } from "./firebase.js";
+import { collection, getDocs } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
+
+async function cargarEstadoPeliculas() {
+  const snapshot = await getDocs(collection(db, "peliculas"));
+
+  snapshot.forEach(doc => {
+    const data = doc.data();
+
+    const checkbox = document.querySelector(
+      `input[data-title="${data.nombre}"]`
+    );
+
+    if (checkbox) {
+      checkbox.checked = data.vista;
+    }
+  });
+}
+
 const movies = [
   {
     title: "Volver al futuro",
@@ -28,14 +48,14 @@ movies.forEach(movie => {
   div.innerHTML = `
     <!-- HEADER -->
     <div class="movie-header">
-        <div class="title">
-        ${movie.title} (${movie.year})
-        </div>
+       <div class="title">
+      ${movie.title} (${movie.year})
+      </div>
 
-        <label class="watched">
-        <input type="checkbox" class="watched-checkbox">
-        Ya la vi
-        </label>
+      <label class="watched">
+      <input type="checkbox" class="watched-checkbox" data-title="${movie.title}">
+      Ya la vi
+      </label>
     </div>
 
     <div class="movie-content">
@@ -58,4 +78,23 @@ movies.forEach(movie => {
   `;
 
   container.appendChild(div);
+});
+
+cargarEstadoPeliculas();
+
+document.addEventListener("change", async (e) => {
+  if (e.target.classList.contains("watched-checkbox")) {
+    const title = e.target.dataset.title;
+    const checked = e.target.checked;
+
+    const snapshot = await getDocs(collection(db, "peliculas"));
+
+    snapshot.forEach(async (d) => {
+      if (d.data().nombre === title) {
+        await updateDoc(doc(db, "peliculas", d.id), {
+          vista: checked
+        });
+      }
+    });
+  }
 });
