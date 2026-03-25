@@ -25,16 +25,106 @@ const movies = [
     trailer: "https://www.youtube.com/embed/ez6WQ7IX72U"
   },
   {
+    title: "Interstellar",
+    year: 2014,
+    poster: "./images/Interstellar_film_poster.jpg",
+    trailer: "https://www.youtube.com/embed/zSWdZVtXT7E"
+  },
+  {
+    title: "Eternal Sunshine of the Spotless Mind",
+    year: 2004,
+    poster: "./images/Eternal_Sunshine_of_the_Spotless_Mind.png",
+    trailer: "https://www.youtube.com/embed/07-QBnEkgXU"
+  },
+  {
     title: "Good will hunting",
     year: 1997,
     poster: "./images/Good_Will_Hunting.png",
     trailer: "https://www.youtube.com/embed/PaZVjZEFkRs"
   },
-   {
+  {
     title: "Scent of a woman",
     year: 1992,
     poster: "./images/unnamed.jpg",
     trailer: "https://www.youtube.com/embed/losLAzU9YCk"
+  },
+  {
+    title: "The Green Mile",
+    year: 1999,
+    poster: "./images/The_Green_Mile.jpg",
+    trailer: "https://www.youtube.com/embed/Ki4haFrqSrw"
+  },
+  {
+    title: "Forrest Gump",
+    year: 1994,
+    poster: "./images/Forrest_Gump_poster.jpg",
+    trailer: "https://www.youtube.com/embed/XHhAG-YLdk8"
+  },
+  {
+    title: "The Usual Suspects",
+    year: 1995,
+    poster: "./images/Usual_suspects_ver1.jpg",
+    trailer: "https://www.youtube.com/embed/Q0eCiCinc4E"
+  },
+  {
+    title: "El secreto de sus ojos",
+    year: 2009,
+    poster: "./images/Cartel-nuevo-de-el-secreto-de-sus-ojos.jpg",
+    trailer: "https://www.youtube.com/embed/hKa8U-8vsfU"
+  },
+  {
+    title: "12 Monkeys",
+    year: 1995,
+    poster: "./images/Twelve_monkeysmp.jpg",
+    trailer: "https://www.youtube.com/embed/15s4Y9ffW_o"
+  },
+  {
+    title: "La vita è bella",
+    year: 1997,
+    poster: "./images/759_LifeIsBeautiful_Catalog_Poster_v2_Approved.png",
+    trailer: "https://www.youtube.com/embed/pAYEQP8gx3w"
+  },
+  {
+    title: "Inception",
+    year: 2010,
+    poster: "./images/Inception_(2010)_theatrical_poster.jpg",
+    trailer: "https://www.youtube.com/embed/YoHD9XEInc0"
+  },
+  {
+    title: "Shutter Island",
+    year: 2010,
+    poster: "./images/Shutterislandposter.jpg",
+    trailer: "https://www.youtube.com/embed/v8yrZSkKxTA"
+  },
+  {
+    title: "The Butterfly Effect",
+    year: 2004,
+    poster: "./images/Butterflyeffect_poster.jpg",
+    trailer: "https://www.youtube.com/embed/kkWQLjI2rAU"
+  },
+  {
+    title: "Nueve reinas",
+    year: 2000,
+    poster: "./images/9reinasposter.jpg",
+    trailer: "https://www.youtube.com/embed/I42JYVjQkPI"
+  },
+  {
+    title: "Man on Fire",
+    year: 2004,
+    poster: "./images/Man_on_fireposter.jpg",
+    trailer: "https://www.youtube.com/embed/eDDh50B6kA4"
+  },
+  {
+    title: "Schindler's List",
+    year: 1993,
+    poster: "./images/Schindler's_List_movie.jpg",
+    trailer: "https://www.youtube.com/embed/mxphAlJID9U"
+  },
+  {
+    title: "The Sixth Sense",
+    year: 1999,
+    poster: "./images/The_Sixth_Sense_poster.png",
+    trailer: "https://www.youtube.com/embed/3-ZP95NF_Wk"
   }
 ];
 
