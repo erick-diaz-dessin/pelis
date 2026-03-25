@@ -106,3 +106,31 @@ iframe {
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: 0.2s;
 }
+
+.thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.03);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔑 CONTENEDOR DEL VIDEO */
+.right iframe,
+.right .thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* clave */
+  border-radius: 8px;
+  border: none;
+  object-fit: cover;
+}

@@ -215,11 +215,17 @@ const movies = [
     year: 1999,
     poster: "./images/The_Matrix.png",
     trailer: "https://www.youtube.com/embed/vKQi3bBA1y8"
+  },
+  {
+    title: "The Others",
+    year: 2001,
+    poster: "./images/TheOthers.jpg",
+    trailer: "https://www.youtube.com/embed/C7pKqaPtMiA"
   }
 ];
 
 let currentIndex = 0;
-const pageSize = 5;
+const pageSize = 10;
 
 const container = document.getElementById("movies");
 
@@ -229,6 +235,9 @@ function renderMovies() {
   nextMovies.forEach(movie => {
     const div = document.createElement("div");
     div.className = "movie";
+
+    const videoId = movie.trailer.split("/embed/")[1];
+    const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
     div.innerHTML = `
       <div class="movie-header">
@@ -250,16 +259,30 @@ function renderMovies() {
         </div>
 
         <div class="right">
-          <iframe 
-            src="${movie.trailer}" 
-            allow="autoplay; fullscreen"
-            allowfullscreen>
-          </iframe>
+          <img 
+            src="${thumbnail}" 
+            class="thumbnail video-placeholder" 
+            data-video="${videoId}"
+            loading="lazy"
+          >
         </div>
       </div>
     `;
 
     container.appendChild(div);
+
+    const thumbnailEl = div.querySelector(".video-placeholder");
+
+    thumbnailEl.addEventListener("click", () => {
+      const id = thumbnailEl.dataset.video;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.allow = "autoplay; fullscreen";
+      iframe.allowFullscreen = true;
+
+      thumbnailEl.replaceWith(iframe);
+    });
   });
 
   currentIndex += pageSize;
