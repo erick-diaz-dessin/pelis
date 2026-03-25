@@ -128,47 +128,59 @@ const movies = [
   }
 ];
 
+let currentIndex = 0;
+const pageSize = 5;
+
 const container = document.getElementById("movies");
 
-movies.forEach(movie => {
-  const div = document.createElement("div");
-  div.className = "movie";
+function renderMovies() {
+  const nextMovies = movies.slice(currentIndex, currentIndex + pageSize);
 
-  div.innerHTML = `
-    <!-- HEADER -->
-    <div class="movie-header">
-       <div class="title">
-      ${movie.title} (${movie.year})
-      </div>
+  nextMovies.forEach(movie => {
+    const div = document.createElement("div");
+    div.className = "movie";
 
-      <label class="watched">
-      <input type="checkbox" class="watched-checkbox" data-title="${movie.title}">
-      Ya la vi
-      </label>
-    </div>
-
-    <div class="movie-content">
-
-        <!-- IZQUIERDA -->
-        <div class="left">
-        <img src="${movie.poster}" class="poster">
+    div.innerHTML = `
+      <div class="movie-header">
+        <div class="title">
+          ${movie.title} (${movie.year})
         </div>
 
-        <!-- DERECHA -->
+        <label class="watched">
+          <input type="checkbox" 
+            class="watched-checkbox" 
+            data-title="${movie.title}">
+          Ya la vi
+        </label>
+      </div>
+
+      <div class="movie-content">
+        <div class="left">
+          <img src="${movie.poster}" class="poster" loading="lazy">
+        </div>
+
         <div class="right">
-        <iframe 
+          <iframe 
             src="${movie.trailer}" 
             allow="autoplay; fullscreen"
             allowfullscreen>
-        </iframe>
+          </iframe>
         </div>
+      </div>
+    `;
 
-    </div>
-  `;
+    container.appendChild(div);
+  });
 
-  container.appendChild(div);
-});
+  currentIndex += pageSize;
 
+  // ocultar botón si ya no hay más
+  if (currentIndex >= movies.length) {
+    document.getElementById("loadMore").style.display = "none";
+  }
+}
+
+renderMovies();
 cargarEstadoPeliculas();
 
 document.addEventListener("change", async (e) => {
@@ -186,4 +198,9 @@ document.addEventListener("change", async (e) => {
       }
     });
   }
+});
+
+document.getElementById("loadMore").addEventListener("click", async () => {
+  renderMovies();
+  await cargarEstadoPeliculas();
 });
